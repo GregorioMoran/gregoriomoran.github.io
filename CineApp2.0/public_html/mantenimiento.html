@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>CineAPP</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + LeadMark main styles -->
+	<link rel="stylesheet" href="assets/css/leadmark.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/logo.svg" alt="" class="img-logo">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="ml-4 nav-link btn btn-primary btn-sm rounded" href="/public_html/index.html">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="ml-4 nav-link btn btn-primary btn-sm rounded" href="">Mantenimiento</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a href="components.html" class="ml-4 nav-link btn btn-primary btn-sm rounded">Components</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h1 class="subtitle">J-CINEMA</h1>
+            <h1 class="title">SOMOS CINE</h1>  
+            <h3> area de Mantenimiento</h3>
+            
+        </div>  
+       
+        <div class="shape">
+            <svg viewBox="0 0 1500 200">
+                <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+            </svg>
+        </div>  
+        <div class="mouse-icon"><div class="wheel"></div></div>
+    </header>
+    <!-- End Of Page Header -->
+ 
+    <!-- Service Section -->
+    
+
+    <div class="mantenimiento-form">
+        <div class="flex-form">
+            <form>
+                <div class="form-group">
+                    <h1 style="text-align: center;">Agregar Pelicula</h1>
+                <label for="exampleInputPassword1">Código</label>
+                <input type="text" class="form-control" id="codigo" placeholder="Código">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Titulo">
+                    </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Categoria</label>
+                            <input type="text" class="form-control" id="categoria" placeholder="Categoria">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Poster</label>
+                                <input type="text" class="form-control" id="poster" placeholder="Poster">
+                                </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Año de Estreno</label>
+                            <input type="text" class="form-control" id="anno" placeholder="Año de Estreno">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">sinopsis</label>
+                                <textarea type="text" class="form-control" id="sinopsis" placeholder=""></textarea>
+                                </div>
+                <button type="button" class="btn btn-primary" onclick="nuevaPeli()">Enviar</button>
+            </form>
+        </div>
+        <div class="flex-form">
+            <form>
+                <div class="form-group">
+                    <h1 style="text-align: center;">Editar Pelicula</h1>
+                <label for="exampleInputPassword1">Código</label>
+                <input type="text" class="form-control" id="codigoeditar" placeholder="Código">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Titulo</label>
+                    <input type="text" class="form-control" id="tituloeditar" placeholder="Titulo">
+                    </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Categoria</label>
+                            <input type="text" class="form-control" id="categoriaeditar" placeholder="Categoria">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Poster</label>
+                                <input type="text" class="form-control" id="postereditar" placeholder="Poster">
+                                </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Año de Estreno</label>
+                            <input type="text" class="form-control" id="annoeditar" placeholder="Año de Estreno">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">sinopsis</label>
+                                <textarea type="text" class="form-control" id="sinopsiseditar" placeholder=""></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="editarPeli()">Enviar</button>
+            </form>
+        </div>
+
+        <div class="third-form">
+            <div class="flex-form">
+                <form>
+                    <div class="form-group">
+                        <h1 style="text-align: center;">Eliminar Pelicula</h1>
+                    <label for="exampleInputPassword1">Código</label>
+                    <input type="text" class="form-control" id="codigoeliminar" placeholder="Código">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="eliminarPeli()">Enviar</button>
+                </form>
+            </div>
+         </div>
+
+
+
+
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <!-- <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-4">+ 123-456-7890</p>
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">12345 Fake ST NoWhere AB Country</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">info@website.com</p>
+                    <p></p>
+                </div>
+                <div class="col-md-7">
+                    <form>
+                        <h4 class="mb-4">Drop Us A Line</h4>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="email" class="form-control text-white rounded-0 bg-transparent" name="Email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message"></textarea>
+
+                            </div>
+                            <div class="form-group col-12 mb-0">
+                                <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                            </div>                          
+                        </div>                          
+                    </form>
+                </div>
+            </div> -->
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p style="text-align: center;" class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, J-CINEMA Creado por Javier. Todos los derechos reservados </p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+    <!-- Consumo de API Cine -->
+    <script src="/public_html/assets/js/apimantenimiento.js"></script>
+    
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="assets/js/leadmark.js"></script>
+
+</body>
+</html>
